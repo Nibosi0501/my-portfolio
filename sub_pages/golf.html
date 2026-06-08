@@ -1,0 +1,163 @@
+<!DOCTYPE HTML>
+<!--
+	Phantom by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html lang="ja">
+
+<head>
+    <title>ミラクルパターゴルフ</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+    <link rel="stylesheet" href="../assets/css/main.css" />
+    <noscript>
+        <link rel="stylesheet" href="../assets/css/noscript.css" />
+    </noscript>
+</head>
+
+<body class="is-preload">
+    <!-- Wrapper -->
+    <div id="wrapper">
+
+        <!-- Header -->
+        <header id="header">
+            <div class="inner">
+
+                <!-- Logo
+                <a href="../index.html" class="logo">
+                    <span class="symbol"><img src="../images/logo.svg" alt="" /></span><span
+                        class="title">Portfolio</span>
+                </a> -->
+
+                <!-- Nav -->
+                <nav>
+                    <ul>
+                        <li><a href="#menu">Menu</a></li>
+                    </ul>
+                </nav>
+
+            </div>
+        </header>
+
+        <!-- Menu -->
+        <nav id="menu">
+            <h2>Menu</h2>
+            <ul>
+                <li><a href="../index.html">Home</a></li>
+                <!--
+                <li><a href="../generic.html">Ipsum veroeros</a></li>
+                <li><a href="../generic.html">Tempus etiam</a></li>
+                <li><a href="../generic.html">Consequat dolor</a></li>
+                <li><a href="../elements.html">Elements</a></li>
+                -->
+            </ul>
+        </nav>
+
+        <!-- Main -->
+        <div id="main">
+            <div class="inner">
+                <h1>ミラクルパターゴルフ</h1>
+                <h2>リアルとバーチャルを融合したパターゴルフコンテンツ</h2>
+                <span class="image main"><img src="../images/sub_pages/golf/header.jpg" alt="" /></span>
+
+                <blockquote>二次元LiDAR, ゴルフ, エンタテインメント, インタラクション
+                </blockquote>
+
+                <div class="raw">
+                    <h3>使用技術</h3>
+                    <ul>
+                        <li>C++ (OpenGL, OpenCV, 2D LiDAR)</li>
+                        <li>C# (Unity)</li>
+                    </ul>
+                </div>
+
+                <h3>概要</h3>
+                <p>
+                    家族連れが参加するスポーツイベント等では，子どもから大人まで幅広い来場者が気軽に参加でき，関心を惹きつける体験型コンテンツへの需要が高まっている．そこで本研究では，リアルとバーチャルを融合したパターゴルフコンテンツを制作した．
+プレイヤーは実際のパターでボールを打つことで操作を行う．その動きを検出して仮想のゴルフコース上にボールとして反映する．仮想空間には得点要素や加速ギミックを導入し，初心者や子どもでも楽しめるよう工夫した．
+プロゴルフ大会で展示した結果，子どもから大人まで幅広い層に好評を得た．
+                </p>
+
+                <span class="image main"><video src="../movies/sub_pages/golf/golf1.mp4" controls
+                        style="width: 100%; display: block; border-radius: 4px;"></video></span>
+
+                <hr />
+                <h3>二次元LiDARによるゴルフボールの検出</h3>
+                <p><span class="image left"><img src="../images/sub_pages/golf/golf1.jpg"
+                            alt="" /></span>
+                    現実空間のグリーンエリアでユーザが打ったゴルフボールを仮想空間に反映するためには，ボールの位置や速度，進行方向などの情報を取得する必要がある．そこで，本研究ではボールの検出に二次元LiDARを使用する．二次元LiDARは数m〜数10m四方の領域にある物体の位置を高い精度と低遅延で検出することができ，既存のパターゴルフコンテンツよりも広いグリーンエリアにも対応可能である．</p>
+                    <p>二次元LiDARは床面上に設置して，床面から約1cm上方を平面的にスキャンする．スキャンエリアのサイズは2.0*0.5mとしており，スキャン結果は1画素あたり2mm四方の二値画像として表現する．スキャンの時間間隔は25msとしているため，10m/s以下の速度でボールを打てば必ずボールを2回スキャンすることができる．</p>
+                    <p>システムはスキャンエリア内で最初に検出されたボールの座標と最後に検出された座標を結ぶことで，ボールが転がる位置と方向を算出する．また，2点間距離およびの時間差から転がり速度を算出する．</p>
+
+                <hr style="clear: both;" />
+                <h3>仮想空間のゴルフグリーン</h3>
+                <p><span class="image main"><img src="../images/sub_pages/golf/golf2.jpg" alt="" /></span>
+                    実空間のグリーンエリアでのボールの転がりは，そのまま仮想空間内のゴルフグリーンに反映される．本研究では，この仮想空間内のゴルフグリーンを3DCGで構築しており，実装はUnityを用いた．
+                </p>
+                <p>
+                    仮想空間内のゴルフグリーンは，運用を行うゴルフトーナメントおよび主催者の一つであるCBCテレビに関連したデザインを取り入れた３つのコースで構成される．各コースには，障害物や壁，ショートカットできる橋の他，ボールが触れると得点が獲得できるアイテムや，接触時にボールを加速させる加速板など，現実には存在しないゲーム特有の要素を配置した．ボールがカップに入ると高得点が得られるが，カップに入らなかったとしてもカップからの距離によって得点が入る．これにより，ゴルフ経験者だけでなく，ゴルフ初心者や未経験者でもホールインワンを取れる可能性を増やすなど，ゴルフの経験の有無に加えてゲームとしての攻略性を持たせたゴルフグリーン設計とした．また，コースやアイテムのデザインを，本コンテンツを展示するゴルフトーナメントに関連付けることで，オフコースゴルフとしてのエンタテインメント性に加えて，スポーツとしてのゴルフの普及に寄与することを目指した．
+                </p>
+
+                <hr style="clear: both;" />
+                <h3>中日クラウンズでの運用</h3>
+                <p><span class="image left"><img src="../images/Golf/crown.png" alt="" /></span>
+                    作成したコンテンツは2025年5月1〜4日に名古屋ゴルフ倶楽部で開催された「中日クラウンズ2025」、2026年4月30日~5月3日のフードコートエリアに展示して運用した．
+                    中日クラウンズ2025では４日間で約550人、中日クラウンズ2026では４日間で約500人の来場者が体験した。
+                </p>
+                <p>
+                    この展示では，未就学児から高齢者まで幅広い年齢層の来場者が訪れた．体験した人はゴルフ経験者，初心者，未経験者など様々であった．ゴルフ経験者はカップを慎重に狙いながらパッティングを行う人が多く，ボールがカップに入って大喜びしたり，通常のゴルフにはない仕掛けに阻まれて悔しがったりする様子が見られた．また，ゴルフ初心者の同伴者が加速板のおかげでホールインワンとなり，経験者と対等に競い合うことができて楽しんでいる様子も見られた．コンテンツが楽しくて何度も体験に来る子どもも見られた．本コンテンツは実際のパターを用いるため，現実のプレイ技術がゲーム内の結果にも反映される一方，通常のゴルフにはない仕掛けが初心者のプレイをアシストする場合もあり，経験者と初心者／未経験者が同じ土俵で競い合いながら楽しめることを確認した．
+                </p>
+
+                <hr style="clear: both;" />
+                <h3>CBC 5チャン春祭りでの運用</h3>
+                <p><span class="image right"><img src="../images/Golf/cbc.png" alt="" /></span>
+                    制作したコンテンツを2026年3月20〜22日に名古屋市中区久屋大通公園で開催されたCBCテレビ主催の「CBC 5チャン春祭り」にて展示運用を行った．
+                    CBC 5チャン春祭りでは3日間で約600人が本コンテンツを体験した．
+                </p>
+                <p>
+                    本イベントには，未就学児やから大人まで幅広い年齢層の来場者が訪れた．「中日クラウンズ2025」での展示に比べるとゴルフ経験者は少なく，子どもやゴルフ未経験者が多く見られた．展示によって，力の弱い子どもであっても，パターゴルフであれば十分に体験可能であることを確認した．さらに，バーチャル環境特有の要素により，初心者でも楽しめることが示された．また，複数回体験する来場者や，大人であっても家族・友人同士で競い合いながら楽しむ様子が見られた．
+                </p>
+
+                <hr style="clear: both;" />
+                <h3>関連リンク</h3>
+                <ul class="alt">
+                    <li><a href="https://sigdcc.sakura.ne.jp/schedule.html#DCC43">リアルとバーチャルを融合したパターゴルフコンテンツの制作とプロゴルフ大会での観客向け運用</a></li>
+                    <li><a href="https://sigdcc.sakura.ne.jp/schedule.html#DICOMO2025p:~:text=%E3%83%91%E3%82%BF%E3%83%BC%E3%82%B4%E3%83%AB%E3%83%95%E3%82%92%E3%83%A2%E3%83%81%E3%83%BC%E3%83%95%E3%81%AB%E3%81%97%E3%81%9F%E3%82%A8%E3%83%B3%E3%82%BF%E3%83%86%E3%82%A4%E3%83%B3%E3%83%A1%E3%83%B3%E3%83%88%E3%82%B3%E3%83%B3%E3%83%86%E3%83%B3%E3%83%84">
+                            パターゴルフをモチーフにしたエンタテインメントコンテンツ
+                        </a></li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- Footer -->
+        <footer id="footer">
+            <div class="inner">
+                <section>
+                    <h2>Follow</h2>
+                    <ul class="icons">
+                        <li><a href="https://github.com/Nibosi0501/Nibosi0501"
+                                class="icon brands style2 fa-github"><span class="label">GitHub</span></a></li>
+                        <li><a href="mailto:nibosi0501@gmail.com" class="icon solid style2 fa-envelope"><span
+                                    class="label">Email</span></a></li>
+                    </ul>
+                </section>
+                <ul class="copyright">
+                    <li>&copy; Untitled. All rights reserved</li>
+                    <li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
+                </ul>
+            </div>
+        </footer>
+
+    </div>
+
+    <!-- Scripts -->
+    <script src="../assets/js/jquery.min.js"></script>
+    <script src="../assets/js/browser.min.js"></script>
+    <script src="../assets/js/breakpoints.min.js"></script>
+    <script src="../assets/js/util.js"></script>
+    <script src="../assets/js/main.js"></script>
+
+</body>
+
+</html>
