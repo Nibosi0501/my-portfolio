@@ -1,0 +1,139 @@
+<!DOCTYPE HTML>
+<!--
+	Phantom by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html lang="ja">
+
+<head>
+    <title>アール・ブリュット</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+    <link rel="stylesheet" href="../assets/css/main.css" />
+    <noscript>
+        <link rel="stylesheet" href="../assets/css/noscript.css" />
+    </noscript>
+</head>
+
+<body class="is-preload">
+    <!-- Wrapper -->
+    <div id="wrapper">
+
+        <!-- Header -->
+        <header id="header">
+            <div class="inner">
+
+                <!-- Logo
+                <a href="../index.html" class="logo">
+                    <span class="symbol"><img src="../images/logo.svg" alt="" /></span><span
+                        class="title">Portfolio</span>
+                </a> -->
+
+                <!-- Nav -->
+                <nav>
+                    <ul>
+                        <li><a href="#menu">Menu</a></li>
+                    </ul>
+                </nav>
+
+            </div>
+        </header>
+
+        <!-- Menu -->
+        <nav id="menu">
+            <h2>Menu</h2>
+            <ul>
+                <li><a href="../index.html">Home</a></li>
+                <!--
+                <li><a href="../generic.html">Ipsum veroeros</a></li>
+                <li><a href="../generic.html">Tempus etiam</a></li>
+                <li><a href="../generic.html">Consequat dolor</a></li>
+                <li><a href="../elements.html">Elements</a></li>
+                -->
+            </ul>
+        </nav>
+
+        <!-- Main -->
+        <div id="main">
+            <div class="inner">
+                <h1>アール・ブリュット</h1>
+                <h2>障がい者アート × メディアアート</h2>
+                <span class="image main"><img src="../images/sub_pages/orchestra/header.jpg" alt="" /></span>
+
+                <blockquote>アート, ジェスチャ認識, インタラクション, メディアアート</blockquote>
+
+                <div class="raw">
+                    <h3>使用技術</h3>
+                    <ul>
+                        <li>C++ (OpenGL)</li>
+                        <li>Python (OpenCV, Ultralytics YOLOv8)</li>
+                    </ul>
+                </div>
+
+                <h3>概要</h3>
+                <p>
+                    家族連れが参加するスポーツイベント等では，子どもから大人まで幅広い来場者が気軽に参加でき，関心を惹きつける体験型コンテンツへの需要が高まっている．そこで本研究では，リアルとバーチャルを融合したパターゴルフコンテンツを制作した．
+プレイヤーは実際のパターでボールを打つことで操作を行う．その動きを検出して仮想のゴルフコース上にボールとして反映する．仮想空間には得点要素や加速ギミックを導入し，初心者や子どもでも楽しめるよう工夫した．
+プロゴルフ大会で展示した結果，子どもから大人まで幅広い層に好評を得た．
+                </p>
+
+                <span class="image main"><video src="../movies/sub_pages/orchestra/orchestra1.mp4" controls
+                        style="width: 100%; display: block; border-radius: 4px;"></video></span>
+
+                <hr />
+                <h3>二次元LiDARによるゴルフボールの検出</h3>
+                <p><span class="image left"><video src="../movies/sub_pages/orchestra/orchestra2.mp4" controls
+                            style="width: 100%;"></video></span>
+                    現実空間のグリーンエリアでユーザが打ったゴルフボールを仮想空間に反映するためには，ボールの位置や速度，進行方向などの情報を取得する必要がある．そこで，本研究ではボールの検出に二次元LiDARを使用する．二次元LiDARは数m〜数10m四方の領域にある物体の位置を高い精度と低遅延で検出することができ，既存のパターゴルフコンテンツよりも広いグリーンエリアにも対応可能である．</p>
+                    <p>二次元LiDARは床面上に設置して，床面から約1cm上方を平面的にスキャンする．スキャンエリアのサイズは2.0*0.5mとしており，スキャン結果は1画素あたり2mm四方の二値画像として表現する．スキャンの時間間隔は25msとしているため，10m/s以下の速度でボールを打てば必ずボールを2回スキャンすることができる．</p>
+                    <p>システムはスキャンエリア内で最初に検出されたボールの座標と最後に検出された座標を結ぶことで，ボールが転がる位置と方向を算出する．また，2点間距離およびの時間差から転がり速度を算出する．</p>
+
+                <hr style="clear: both;" />
+                <h3>Aichi Tech Day 2026 への出展</h3>
+                <p><span class="image left"><video src="../movies/sub_pages/golf/golf2.mp4" controls
+                            style="width: 100%;"></video></span>
+                    作成したコンテンツは2025年5月1〜4日に名古屋ゴルフ倶楽部で開催された「中日クラウンズ2025」、2026年4月30日~5月3日のフードコートエリアに展示して運用した．
+                    中日クラウンズ2025では４日間で約550人、中日クラウンズ2026では４日間で約500人の来場者が体験した。
+                </p>
+
+                <hr style="clear: both;" />
+                <h3>関連リンク</h3>
+                <ul class="alt">
+                    <li><a href="https://www.ipsj.or.jp/kenkyukai/event/dcc43.html">第43回デジタルコンテンツクリエーション研究発表会 口頭発表: リアルとバーチャルを融合したパターゴルフコンテンツの制作とプロゴルフ大会での観客向け運用</a></li>
+                    <li><a href="https://dicomo.org/2025/">DICOMO2025併設デジタルコンテンツ制作発表会 デモ発表: パターゴルフをモチーフにしたエンタテインメントコンテンツ</a></li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- Footer -->
+        <footer id="footer">
+            <div class="inner">
+                <section>
+                    <h2>Follow</h2>
+                    <ul class="icons">
+                        <li><a href="https://github.com/Nibosi0501/Nibosi0501"
+                                class="icon brands style2 fa-github"><span class="label">GitHub</span></a></li>
+                        <li><a href="mailto:nibosi0501@gmail.com" class="icon solid style2 fa-envelope"><span
+                                    class="label">Email</span></a></li>
+                    </ul>
+                </section>
+                <ul class="copyright">
+                    <li>&copy; Untitled. All rights reserved</li>
+                    <li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
+                </ul>
+            </div>
+        </footer>
+
+    </div>
+
+    <!-- Scripts -->
+    <script src="../assets/js/jquery.min.js"></script>
+    <script src="../assets/js/browser.min.js"></script>
+    <script src="../assets/js/breakpoints.min.js"></script>
+    <script src="../assets/js/util.js"></script>
+    <script src="../assets/js/main.js"></script>
+
+</body>
+
+</html>
