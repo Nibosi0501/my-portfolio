@@ -1,0 +1,139 @@
+<!DOCTYPE HTML>
+<!--
+	Phantom by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html lang="ja">
+
+<head>
+    <title>お絵描き & 身体動作</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+    <link rel="stylesheet" href="../assets/css/main.css" />
+    <noscript>
+        <link rel="stylesheet" href="../assets/css/noscript.css" />
+    </noscript>
+</head>
+
+<body class="is-preload">
+    <!-- Wrapper -->
+    <div id="wrapper">
+
+        <!-- Header -->
+        <header id="header">
+            <div class="inner">
+
+                <!-- Logo -->
+                <!-- <a href="../index.html" class="logo">
+                    <span class="symbol"><img src="../images/logo.svg" alt="" /></span><span
+                        class="title">Portfolio</span>
+                </a> -->
+
+                <!-- Nav -->
+                <nav>
+                    <ul>
+                        <li><a href="#menu">Menu</a></li>
+                    </ul>
+                </nav>
+
+            </div>
+        </header>
+
+        <!-- Menu -->
+        <nav id="menu">
+            <h2>Menu</h2>
+            <ul>
+                <li><a href="../index.html">Home</a></li>
+                <!--
+                <li><a href="../generic.html">Ipsum veroeros</a></li>
+                <li><a href="../generic.html">Tempus etiam</a></li>
+                <li><a href="../generic.html">Consequat dolor</a></li>
+                <li><a href="../elements.html">Elements</a></li>
+                -->
+            </ul>
+        </nav>
+
+        <!-- Main -->
+        <div id="main">
+            <div class="inner">
+                <h1>お絵描き & 身体動作 インタラクティブアート</h1>
+                <h2>お絵描きと身体動作を取り入れた​インタラクティブコンテンツ</h2>
+                <span class="image main"><img src="../images/sub_pages/oekaki/header.jpg" alt="" /></span>
+
+                <blockquote>お絵描き、インタラクション、アート、ジェスチャ認識
+                </blockquote>
+
+                <div class="raw">
+                    <h3>使用技術</h3>
+                    <ul>
+                        <li>C++ (OpenGL, OpenCV)</li>
+                        <li>Python (OpenCV, Ultralytics YOLOv8)</li>
+                    </ul>
+                </div>
+
+                <h3>概要</h3>
+                <p>
+                    家族連れが参加するイベント等では、子どもたちの関心を引き付けるコンテンツに注目が集まっている。そこで本研究では、お絵描きと身体動作で体験できるインタラクティブコンテンツを開発した。このコンテンツでは人や動物、植物などの手描き絵がCGとなって画面内に登場して、ジェスチャーを用いて画面内の絵に対してアクションを起こすことができる。ジェスチャ認識はカメラによる骨格検出を活用する。映像用とジェスチャ認識用のPCを個別に用いてネットワークで連動して負荷分散することでリアルタイム処理を実現している。開発コンテンツを家族向けイベントで展示を行ったところ、子どもだけでなく保護者も楽しんでいる様子が見られた。
+                </p>
+
+                <span class="image main"><video src="../movies/sub_pages/oekaki/oekaki.mp4" controls
+                        style="width: 100%; display: block; border-radius: 4px;"></video></span>
+
+                <hr />
+                <h3>イベントに合わせたお絵描き＆身体動作インタラクティブコンテンツを開発</h3>
+                <p><span class="image main"><img src="../images/sub_pages/oekaki/img1.jpg"alt="" /></span>
+                    イベント内容に合わせて、お絵描きと身体動作を組み合わせたインタラクティブコンテンツを開発した。本コンテンツでは、来場者が木や動物の絵を描くと、描いたイラストが映像中の山へ出現する。さらに、来場者がバンザイ動作を行うことで木が成長し、森が徐々に豊かになっていく演出を実現した。
+                </p>
+                <p>
+                    お絵描き取得およびCG映像生成用PCでは、Webカメラで取得したお絵描き画像に対して輪郭検出ベースの画像処理を行い、描画内容を抽出して2DCGモデル化した。なお、描画対象の識別は手動で行い、「木」、「動物」、「魚」、「海藻」といった分類を与えた。生成したCG映像はリアルタイムに描画され、複数モニタを連携させながら同時出力を行った。また、身体動作取得用PCから受信した動作検出結果を用いて、CGモデルの動きやサイズを変化させた。
+                </p>
+                <p>
+                    身体動作取得用PCでは、Webカメラで撮影した人物映像に対してAIによる関節点抽出を行い、バンザイ動作を検出した。検出結果はネットワーク経由でお絵描き取得＆CG映像生成用PCへ送信した。
+                </p>
+
+                <hr style="clear: both;" />
+                <h3>イベントにおける運用</h3>
+                <p><span class="image main"><img src="../images/sub_pages/oekaki/img2.jpg" alt="" /></span>
+                    作成したコンテンツは、愛知県で開催された家族向けイベント（ウッドワンダーランド in 東三河, ウッドコレクション in 東三河, 三河湾大感謝祭, Bリーグ試合会場）において複数回の展示運用を行った。
+                </p>
+
+                <hr style="clear: both;" />
+                <h3>関連リンク</h3>
+                <ul class="alt">
+                    <li><a href="https://sites.google.com/view/winf2024/program?authuser=0#:~:text=%E5%AE%B6%E6%97%8F%E5%90%91%E3%81%91%E3%82%A4%E3%83%99%E3%83%B3%E3%83%88%E7%94%A8%E3%81%AE%E3%82%A4%E3%83%B3%E3%82%BF%E3%83%A9%E3%82%AF%E3%83%86%E3%82%A3%E3%83%96%E3%82%B3%E3%83%B3%E3%83%86%E3%83%B3%E3%83%84%E3%81%AE%E9%96%8B%E7%99%BA%E3%80%8D">第23回情報学ワークショップ(WiNF2025) ポスター発表: 家族向けイベント用のインタラクティブコンテンツの開発</a></li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- Footer -->
+        <footer id="footer">
+            <div class="inner">
+                <section>
+                    <h2>Follow</h2>
+                    <ul class="icons">
+                        <li><a href="https://github.com/Nibosi0501/Nibosi0501"
+                                class="icon brands style2 fa-github"><span class="label">GitHub</span></a></li>
+                        <li><a href="mailto:nibosi0501@gmail.com" class="icon solid style2 fa-envelope"><span
+                                    class="label">Email</span></a></li>
+                    </ul>
+                </section>
+                <ul class="copyright">
+                    <li>&copy; Untitled. All rights reserved</li>
+                    <li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
+                </ul>
+            </div>
+        </footer>
+
+    </div>
+
+    <!-- Scripts -->
+    <script src="../assets/js/jquery.min.js"></script>
+    <script src="../assets/js/browser.min.js"></script>
+    <script src="../assets/js/breakpoints.min.js"></script>
+    <script src="../assets/js/util.js"></script>
+    <script src="../assets/js/main.js"></script>
+
+</body>
+
+</html>
