@@ -1,0 +1,141 @@
+<!DOCTYPE HTML>
+<!--
+	Phantom by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html lang="ja">
+
+<head>
+    <title>LiviMotion</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+    <link rel="stylesheet" href="../assets/css/main.css" />
+    <noscript>
+        <link rel="stylesheet" href="../assets/css/noscript.css" />
+    </noscript>
+</head>
+
+<body class="is-preload">
+    <!-- Wrapper -->
+    <div id="wrapper">
+
+        <!-- Header -->
+        <header id="header">
+            <div class="inner">
+
+                <!-- Logo -->
+                <!-- <a href="../index.html" class="logo">
+                    <span class="symbol"><img src="../images/logo.svg" alt="" /></span><span
+                        class="title">Portfolio</span>
+                </a> -->
+
+                <!-- Nav -->
+                <nav>
+                    <ul>
+                        <li><a href="#menu">Menu</a></li>
+                    </ul>
+                </nav>
+
+            </div>
+        </header>
+
+        <!-- Menu -->
+        <nav id="menu">
+            <h2>Menu</h2>
+            <ul>
+                <li><a href="../index.html">Home</a></li>
+                <!--
+                <li><a href="../generic.html">Ipsum veroeros</a></li>
+                <li><a href="../generic.html">Tempus etiam</a></li>
+                <li><a href="../generic.html">Consequat dolor</a></li>
+                <li><a href="../elements.html">Elements</a></li>
+                -->
+            </ul>
+        </nav>
+
+        <!-- Main -->
+        <div id="main">
+            <div class="inner">
+                <h1>LiViMotion</h1>
+                <h2>歩行位置と身体動作に基づく、個人ごとの床面映像とのインタラクション</h2>
+                <span class="image main"><img src="../images/sub_pages/oekaki/header.jpg" alt="" /></span>
+
+                <blockquote>インタラクション, ジェスチャ認識, センサフュージョン, カルマンフィルタ, 2D LiDAR</blockquote>
+
+                <div class="raw">
+                    <h3>使用技術</h3>
+                    <ul>
+                        <li>C++ (OpenGL, OpenCV, 2D LiDAR, プロセス間通信)</li>
+                        <li>Python (OpenCV, Ultralytics YOLOv11, プロセス間通信)</li>
+                    </ul>
+                </div>
+
+                <h3>概要</h3>
+                <p>
+                    LiViMotionは、歩行者一人ひとりに合わせた床面映像を提示し、身体動作によって映像とインタラクションできるシステムです。歩行位置や移動方向に応じて映像が追従するだけでなく、腕を上げるといった動作に応じて映像が変化します。
+                    本システムでは、2D LiDARによる歩行者追跡とカメラによる身体動作認識を組み合わせ、カルマンフィルタとハンガリアンアルゴリズムを用いて両センサのデータを統合しています。これにより、複数人が存在する環境でも、各ユーザに対して個別の映像体験を提供できます。
+                    エンターテインメント用途だけでなく、身体動作を利用した情報提示や災害時の避難誘導などへの応用も想定しています。
+                </p>
+
+                <span class="image main"><video src="../movies/sub_pages/LiviMotion/LiviMotionFloor.mp4" controls
+                        style="width: 100%; display: block; border-radius: 4px;"></video></span>
+
+                <hr />
+                <h3>歩行位置と身体動作に基づく床面映像とのインタラクション</h3>
+                <p><span class="image left"><video src="../movies/sub_pages/golf/golf2.mp4" controls
+                            style="width: 100%;"></video></span>
+                    本作品は、お絵描きと身体動作を組み合わせたインタラクティブコンテンツです。来場者が描いた木や動物のイラストをリアルタイムにCG化し、映像内の山や森へ登場させます。さらに、来場者がバンザイ動作を行うと木が成長するなど、身体動作によって描いた絵に変化を与えることができます。
+                </p>
+                <p>
+                    システムは、お絵描き取得・CG映像生成用PCと身体動作認識用PCで構成されています。お絵描き画像に対して輪郭抽出を行い、描画内容をCGモデルとして生成します。また、カメラ映像からAIによる骨格推定を行い、バンザイ動作を認識します。認識結果はネットワーク経由でCG描画システムへ送信され、リアルタイムに映像へ反映されます。複数PCによる処理分散により、スムーズなインタラクションを実現しました。
+                </p>
+
+                <hr style="clear: both;" />
+                <h3>イベントにおける運用</h3>
+                <p><span class="image main"><img src="../images/sub_pages/oekaki/img2.jpg" alt="" /></span>
+                    作成したコンテンツは、愛知県で開催された家族向けイベント（ウッドワンダーランド in 東三河, ウッドコレクション in 東三河, 三河湾大感謝祭, Bリーグ試合会場）において複数回の展示を行いました。来場者は子どもから大人まで幅広く、描いた絵が映像内に登場する様子や、身体動作によって絵が変化する体験を楽しんでいただきました。イベントでは、来場者の反応を観察しながらシステムの安定性やインタラクションの自然さを確認し、必要に応じて調整を行いました。
+                </p>
+
+                <hr style="clear: both;" />
+                <h3>関連リンク</h3>
+                <ul class="alt">
+                    <li><a href="https://github.com/Nibosi0501/LiviMotion">GitHub リポジトリ: LiviMotion</a></li>
+                    <li><a href="https://dicomo.org/">マルチメディア、分散、協調とモバイル(DICOMO2026)シンポジウム 口頭発表, デモ発表: 歩行位置と方向を考慮した歩行者向け床面映像提示手法における身体動作インタラクションへの拡張</a></li>
+                    <li><a href="https://dicomo.org/">DICOMO2026併設デジタルコンテンツ制作発表会 デモ発表</a></li>
+                    <li><a href="https://www.ipsj.or.jp/kenkyukai/event/cg200dcc41cvim243.html">第41回デジタルコンテンツクリエーション研究発表会 口頭発表</a></li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- Footer -->
+        <footer id="footer">
+            <div class="inner">
+                <section>
+                    <h2>Follow</h2>
+                    <ul class="icons">
+                        <li><a href="https://github.com/Nibosi0501/Nibosi0501"
+                                class="icon brands style2 fa-github"><span class="label">GitHub</span></a></li>
+                        <li><a href="mailto:nibosi0501@gmail.com" class="icon solid style2 fa-envelope"><span
+                                    class="label">Email</span></a></li>
+                    </ul>
+                </section>
+                <ul class="copyright">
+                    <li>&copy; Untitled. All rights reserved</li>
+                    <li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
+                </ul>
+            </div>
+        </footer>
+
+    </div>
+
+    <!-- Scripts -->
+    <script src="../assets/js/jquery.min.js"></script>
+    <script src="../assets/js/browser.min.js"></script>
+    <script src="../assets/js/breakpoints.min.js"></script>
+    <script src="../assets/js/util.js"></script>
+    <script src="../assets/js/main.js"></script>
+
+</body>
+
+</html>
