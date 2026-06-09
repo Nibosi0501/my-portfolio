@@ -59,9 +59,9 @@
             <div class="inner">
                 <h1>LiViMotion</h1>
                 <h2>歩行位置と身体動作に基づく、個人ごとの床面映像とのインタラクション</h2>
-                <span class="image main"><img src="../images/sub_pages/oekaki/header.jpg" alt="" /></span>
+                <span class="image main"><img src="../images/sub_pages/LiViMotion/header.png" alt="" /></span>
 
-                <blockquote>インタラクション, ジェスチャ認識, センサフュージョン, カルマンフィルタ, 2D LiDAR</blockquote>
+                <blockquote>インタラクション, 床面映像, ジェスチャ認識, センサフュージョン, カルマンフィルタ, 2D LiDAR</blockquote>
 
                 <div class="raw">
                     <h3>使用技術</h3>
@@ -69,6 +69,7 @@
                         <li>C++ (OpenGL, OpenCV, 2D LiDAR, プロセス間通信)</li>
                         <li>Python (OpenCV, Ultralytics YOLOv11, プロセス間通信)</li>
                     </ul>
+                    <p>GitHub リポジトリ: <a href="https://github.com/Nibosi0501/LiviMotion">LiviMotion</a></p>
                 </div>
 
                 <h3>概要</h3>
@@ -82,19 +83,25 @@
                         style="width: 100%; display: block; border-radius: 4px;"></video></span>
 
                 <hr />
-                <h3>歩行位置と身体動作に基づく床面映像とのインタラクション</h3>
-                <p><span class="image left"><video src="../movies/sub_pages/golf/golf2.mp4" controls
+                <h3>床面映像とのインタラクション</h3>
+                <p><span class="image left"><video src="../movies/sub_pages/LiviMotion/LiViMotion.mp4" controls
                             style="width: 100%;"></video></span>
-                    本作品は、お絵描きと身体動作を組み合わせたインタラクティブコンテンツです。来場者が描いた木や動物のイラストをリアルタイムにCG化し、映像内の山や森へ登場させます。さらに、来場者がバンザイ動作を行うと木が成長するなど、身体動作によって描いた絵に変化を与えることができます。
-                </p>
-                <p>
-                    システムは、お絵描き取得・CG映像生成用PCと身体動作認識用PCで構成されています。お絵描き画像に対して輪郭抽出を行い、描画内容をCGモデルとして生成します。また、カメラ映像からAIによる骨格推定を行い、バンザイ動作を認識します。認識結果はネットワーク経由でCG描画システムへ送信され、リアルタイムに映像へ反映されます。複数PCによる処理分散により、スムーズなインタラクションを実現しました。
+                    LiViMotionでは、ユーザの身体動作に応じて床面映像がリアルタイムに変化します。歩行中に手を挙げると、その動作を認識し、ユーザの足元へ映像エフェクトを表示します。右手・左手・両手のどれを挙げたかによって異なる演出を行うことができ、星や雪の結晶などの映像がユーザに追従しながら表示されます。
+                    これにより、単に映像の上を歩くだけでなく、自身の身体動作によって映像を操作する体験を実現しています。
                 </p>
 
                 <hr style="clear: both;" />
-                <h3>イベントにおける運用</h3>
-                <p><span class="image main"><img src="../images/sub_pages/oekaki/img2.jpg" alt="" /></span>
-                    作成したコンテンツは、愛知県で開催された家族向けイベント（ウッドワンダーランド in 東三河, ウッドコレクション in 東三河, 三河湾大感謝祭, Bリーグ試合会場）において複数回の展示を行いました。来場者は子どもから大人まで幅広く、描いた絵が映像内に登場する様子や、身体動作によって絵が変化する体験を楽しんでいただきました。イベントでは、来場者の反応を観察しながらシステムの安定性やインタラクションの自然さを確認し、必要に応じて調整を行いました。
+                <h3>カメラのキャリブレーション</h3>
+                <p><span class="image right"><img src="../images/sub_pages/LiViMotion/calibration.png" alt="" /></span>
+                    床面に投影した格子状マーカーを利用し、カメラ座標系と床面座標系の対応関係を構築しました。各マーカーの既知座標と画像上の検出位置から射影変換行列を算出することで、カメラ映像中の人物位置を床面座標へ高精度に変換し、床面映像とのインタラクションに活用しています。
+                </p>
+
+                <hr style="clear: both;" />
+                <h3>センサフュージョン</h3>
+                <p><span class="image left"><img src="../images/sub_pages/LiViMotion/img1.jpg" alt="" /></span>
+                    各ユーザの歩行位置と身体動作を結び付けるため、2D LiDARとカメラのデータ統合を行いました。2D LiDARから取得した歩行位置と、カメラ映像から推定した歩行位置を比較することで、同一人物の対応付けを行います。
+                    カメラによる骨格検出には処理遅延が生じるため、カルマンフィルタを用いて数フレーム先の位置を予測し、遅延を補正しました。その後、ハンガリアンアルゴリズムを用いてLiDARとカメラの歩行位置を最適に対応付けることで、高精度な位置追跡と身体動作認識を実現しています。
+                    これにより、複数人が同時に利用する環境でも、各ユーザの身体動作に応じた個別のインタラクションを可能にしています。
                 </p>
 
                 <hr style="clear: both;" />
