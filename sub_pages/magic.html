@@ -60,7 +60,7 @@
                 <h1>見習い魔法使いの今晩のお夕飯</h1>
                 <h2>コップとミストがインタフェースのインタラクティブコンテンツ</h2>
                 <h2>東京ゲームショウ2023 出展</h2>
-                <span class="image main"><img src="../images/sub_pages/orchestra/header.jpg" alt="" /></span>
+                <span class="image main"><img src="../images/sub_pages/magic/header.png" alt="" /></span>
 
                 <blockquote>ゲーム, インタラクティブコンテンツ, プロジェクションマッピング, 東京ゲームショウ</blockquote>
 
@@ -75,38 +75,45 @@
                 
                 <h3>概要</h3>
                 <p>
-                    本コンテンツは、障がい者による表現であるアール・ブリュット作品を活用したインタラクティブアートです。鑑賞者の身体動作に合わせて絵画内のモチーフが動いたり変化したりすることで、作品との新しい関わり方を体験していただけます。従来の「見る」だけの鑑賞に加え、「身体を使って作品と対話する」体験を提供することを目指しました。制作にあたっては、作品本来の魅力や表現を損なわないよう、原画の特徴を尊重した動きや演出を設計しています。
+                    プレイヤーは見習い魔法使いとなり、魔法の力を使って師匠のための夕食作りに挑戦します。
+                    画面に表示される目標の色に合わせて、赤・青・緑に輝くミストをコップですくい、鍋へ注ぎます。鍋の中では色を混ぜ合わせることができ、例えば赤と緑を組み合わせることで黄色を作ることができます。プレイヤーは色の混色を考えながら、指定された色を素早く作り出すことを目指します。
+                    ミストは実際に空間へ投影されており、プレイヤーはコップで「すくう」動作を行うことで魔法を使っているような体験を楽しめます。すべての料理を完成させると師匠による審査が行われ、クリアタイムに応じてスコアが決定されます。
                 </p>
 
                 <span class="image main"><video src="../movies/sub_pages/magic/magic2.mp4" controls
                         style="width: 100%; display: block; border-radius: 4px;"></video></span>
 
                 <hr />
-                <h3>障がい者支援施設「アトリエ・ブルート」に所属する作家の作品を映像化</h3>
-                <p><span class="image left"><video src="../movies/sub_pages/orchestra/orchestra2.mp4" controls
-                            style="width: 100%;"></video></span>
-                            障がい者のアート活動を支援する施設「アトリエ・ブルート」に所属する作家の作品を映像化しました。
-                            このオーケストラの映像は、名古屋市国際音楽祭をモチーフにした、アトリエ・ブルートの作家 奥野誠也さんの絵画作品です。
+                <h3></h3>
+                <p><span class="image main"><img src="../images/sub_pages/magic/img2.png"
+                            alt="" /></span>
+                    <span style="clear: both;" class="image right"><img src="../images/sub_pages/magic/img3.png"
+                            alt="" /></span>
+                            とある森に、魔女とその見習いが住んでいました。<br>
+                            彼女たちの家の屋根が赤く染まり出した頃、見習いは自分の服の袖を捲りました。<br>
+                            そう、今日のお夕飯担当は見習い魔法使いのあなたです！<br>
+                            「今日こそは、ししょうに美味しかったと言って貰えるような夕飯を作るぞ！」<br>
+                            見習い魔法使いの今日のお夕飯作りが今、始まります！
                 </p>
                 
                 <hr style="clear: both;" />
-                <h3>Aichi Tech Day 2026 への出展</h3>
-                <p><span class="image right"><video src="../movies/sub_pages/orchestra/orchestra3.mp4" controls
+                <h3>コップとミストによるインタラクション</h3>
+                <p><span class="image left"><video src="../movies/sub_pages/magic/magic3.mp4" controls
                             style="width: 100%;"></video></span>
-                    作成したコンテンツは2026年5月24日に愛知県 愛・地球博記念公園地球市民交流センターで開催されたAichi Tech Day 2026にて展示を行いました。
-                    Aichi Tech Day 2026では、子どもから大人まで幅広い年齢層の来場者が本コンテンツを体験し、楽しんでいただきました。
+                    コップに取り付けたM5Stackの姿勢センサを用いて、コップの傾きをリアルタイムに取得しています。これにより、プレイヤーの「すくう」「注ぐ」といった動作をゲーム内へ反映しています。
+                    また、カメラ画像からミスト領域の色を取得し、画像処理によって現在のミストの色を判定します。判定結果とコップの状態を組み合わせることで、どの色のミストを取得したかを認識し、ゲーム内の混色システムへ反映しています。
+                    さらに、Leap Motionを用いてプレイヤーの手の位置と動きを追跡し、鍋をかき混ぜる動作を検出しています。プレイヤーが実際に鍋の上で手を回すと、その動きがゲーム内の混色処理に反映され、魔法の料理を作っているような体験を実現しています。
+                    M5Stack、カメラ、Leap Motionを組み合わせることで、「すくう」「注ぐ」「混ぜる」という一連の料理動作を現実空間で再現し、直感的なインタラクションを実現しました。
+
                 </p>
-                <p style="clear: both;"><span class="image right"><img src="../images/sub_pages/orchestra/img1.jpg"
-                            alt="" /></span>
-                    また、愛知県知事の大村知事や、ノーベル物理学賞受賞の天野浩先生も本コンテンツを体験してくださいました。
 
                 <hr style="clear: both;" />
-                <h3>EフェスNEXT への出展</h3>
-                <p><span class="image left"><img src="../images/sub_pages/orchestra/img2.jpg"
-                            alt="" /></span>
-                    作成したコンテンツは2026年1月12日に三井ショッピングパーク ららぽーと安城で開催されたEフェスNEXTにて展示を行いました。
-                    EフェスNEXTでは、子どもから大人まで幅広い年齢層の来場者 約300名が本コンテンツを体験し、楽しんでいただきました。
-                </p>
+                <h3>東京ゲームショウ2023 への出展</h3>
+                <p>
+                    作成したコンテンツは2023年9月26日~29日に東京ビッグサイトで開催された東京ゲームショウ2023にて展示を行いました。
+                    東京ゲームショウ2023では、子どもから大人まで幅広い年齢層の来場者が本コンテンツを体験し、楽しんでいただきました。
+                </p style="clear: both;"><video src="../movies/sub_pages/magic/magic.mp4" controls
+                            style="width: 100%;"></video></span>
                 
                 <hr style="clear: both;" />
                 <h3>関連リンク</h3>
