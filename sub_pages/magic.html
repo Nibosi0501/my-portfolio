@@ -1,0 +1,157 @@
+<!DOCTYPE HTML>
+<!--
+	Phantom by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html lang="ja">
+
+<head>
+    <title>見習い魔法使いの今晩のお夕飯</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+    <link rel="stylesheet" href="../assets/css/main.css" />
+    <noscript>
+        <link rel="stylesheet" href="../assets/css/noscript.css" />
+    </noscript>
+</head>
+
+<body class="is-preload">
+    <!-- Wrapper -->
+    <div id="wrapper">
+
+        <!-- Header -->
+        <header id="header">
+            <div class="inner">
+
+                <!-- Logo
+                <a href="../index.html" class="logo">
+                    <span class="symbol"><img src="../images/logo.svg" alt="" /></span><span
+                        class="title">Portfolio</span>
+                </a> -->
+
+                <!-- Nav -->
+                <nav>
+                    <ul>
+                        <li><a href="#menu">Menu</a></li>
+                    </ul>
+                </nav>
+
+            </div>
+        </header>
+
+        <!-- Menu -->
+        <nav id="menu">
+            <h2>Menu</h2>
+            <ul>
+                <li><a href="../index.html">Home</a></li>
+                <!--
+                <li><a href="../generic.html">Ipsum veroeros</a></li>
+                <li><a href="../generic.html">Tempus etiam</a></li>
+                <li><a href="../generic.html">Consequat dolor</a></li>
+                <li><a href="../elements.html">Elements</a></li>
+                -->
+            </ul>
+        </nav>
+
+        <!-- Main -->
+        <div id="main">
+            <div class="inner">
+                <h1>見習い魔法使いの今晩のお夕飯</h1>
+                <h2>コップとミストがインタフェースのインタラクティブコンテンツ</h2>
+                <h2>東京ゲームショウ2023 出展</h2>
+                <span class="image main"><img src="../images/sub_pages/magic/header.png" alt="" /></span>
+
+                <blockquote>ゲーム, インタラクティブコンテンツ, プロジェクションマッピング, 東京ゲームショウ</blockquote>
+
+                <div class="raw">
+                    <h3>使用技術</h3>
+                    <ul>
+                        <li>C++ (OpenGL, OpenGL, Leap Motion, Bluetooth通信, M5Stack(加速度センサ))</li>
+                        <li>Unity (C#)</li>
+                    </ul>
+                </div>
+
+                
+                <h3>概要</h3>
+                <p>
+                    プレイヤーは見習い魔法使いとなり、魔法の力を使って師匠のための夕食作りに挑戦します。
+                    画面に表示される目標の色に合わせて、赤・青・緑に輝くミストをコップですくい、鍋へ注ぎます。鍋の中では色を混ぜ合わせることができ、例えば赤と緑を組み合わせることで黄色を作ることができます。プレイヤーは色の混色を考えながら、指定された色を素早く作り出すことを目指します。
+                    ミストは実際に空間へ投影されており、プレイヤーはコップで「すくう」動作を行うことで魔法を使っているような体験を楽しめます。すべての料理を完成させると師匠による審査が行われ、クリアタイムに応じてスコアが決定されます。
+                </p>
+
+                <span class="image main"><video src="../movies/sub_pages/magic/magic2.mp4" controls
+                        style="width: 100%; display: block; border-radius: 4px;"></video></span>
+
+                <hr />
+                <h3></h3>
+                <p><span class="image main"><img src="../images/sub_pages/magic/img2.png"
+                            alt="" /></span>
+                    <span style="clear: both;" class="image right"><img src="../images/sub_pages/magic/img3.png"
+                            alt="" /></span>
+                            とある森に、魔女とその見習いが住んでいました。<br>
+                            彼女たちの家の屋根が赤く染まり出した頃、見習いは自分の服の袖を捲りました。<br>
+                            そう、今日のお夕飯担当は見習い魔法使いのあなたです！<br>
+                            「今日こそは、ししょうに美味しかったと言って貰えるような夕飯を作るぞ！」<br>
+                            見習い魔法使いの今日のお夕飯作りが今、始まります！
+                </p>
+                
+                <hr style="clear: both;" />
+                <h3>コップとミストによるインタラクション</h3>
+                <p><span class="image left"><video src="../movies/sub_pages/magic/magic3.mp4" controls
+                            style="width: 100%;"></video></span>
+                    コップに取り付けたM5Stackの姿勢センサを用いて、コップの傾きをリアルタイムに取得しています。これにより、プレイヤーの「すくう」「注ぐ」といった動作をゲーム内へ反映しています。
+                    また、カメラ画像からミスト領域の色を取得し、画像処理によって現在のミストの色を判定します。判定結果とコップの状態を組み合わせることで、どの色のミストを取得したかを認識し、ゲーム内の混色システムへ反映しています。
+                    さらに、Leap Motionを用いてプレイヤーの手の位置と動きを追跡し、鍋をかき混ぜる動作を検出しています。プレイヤーが実際に鍋の上で手を回すと、その動きがゲーム内の混色処理に反映され、魔法の料理を作っているような体験を実現しています。
+                    M5Stack、カメラ、Leap Motionを組み合わせることで、「すくう」「注ぐ」「混ぜる」という一連の料理動作を現実空間で再現し、直感的なインタラクションを実現しました。
+
+                </p>
+
+                <hr style="clear: both;" />
+                <h3>東京ゲームショウ2023 への出展</h3>
+                <p>
+                    作成したコンテンツは2023年9月26日~29日に東京ビッグサイトで開催された東京ゲームショウ2023にて展示を行いました。
+                    東京ゲームショウ2023では、子どもから大人まで幅広い年齢層の来場者が本コンテンツを体験し、楽しんでいただきました。
+                </p style="clear: both;"><video src="../movies/sub_pages/magic/magic.mp4" controls
+                            style="width: 100%;"></video></span>
+                
+                <hr style="clear: both;" />
+                <h3>関連リンク</h3>
+                <ul class="alt">
+                    <li><a href="https://expo.nikkeibp.co.jp/tgs/2023/jp/">東京ゲームショウ2023</a></li>
+                    <li><a href="https://www.youtube.com/shorts/uW_mukkkw1k">ゲーム紹介動画</a></li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- Footer -->
+        <footer id="footer">
+            <div class="inner">
+                <section>
+                    <h2>Follow</h2>
+                    <ul class="icons">
+                        <li><a href="https://github.com/Nibosi0501/Nibosi0501"
+                                class="icon brands style2 fa-github"><span class="label">GitHub</span></a></li>
+                        <li><a href="mailto:nibosi0501@gmail.com" class="icon solid style2 fa-envelope"><span
+                                    class="label">Email</span></a></li>
+                    </ul>
+                </section>
+                <ul class="copyright">
+                    <li>&copy; Untitled. All rights reserved</li>
+                    <li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
+                </ul>
+            </div>
+        </footer>
+
+    </div>
+
+    <!-- Scripts -->
+    <script src="../assets/js/jquery.min.js"></script>
+    <script src="../assets/js/browser.min.js"></script>
+    <script src="../assets/js/breakpoints.min.js"></script>
+    <script src="../assets/js/util.js"></script>
+    <script src="../assets/js/main.js"></script>
+
+</body>
+
+</html>
