@@ -1,0 +1,142 @@
+<!DOCTYPE HTML>
+<!--
+	Phantom by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html lang="ja">
+
+<head>
+    <title>扇義陰陽道中</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+    <link rel="stylesheet" href="../assets/css/main.css" />
+    <noscript>
+        <link rel="stylesheet" href="../assets/css/noscript.css" />
+    </noscript>
+</head>
+
+<body class="is-preload">
+    <!-- Wrapper -->
+    <div id="wrapper">
+
+        <!-- Header -->
+        <header id="header">
+            <div class="inner">
+
+                <!-- Logo
+                <a href="../index.html" class="logo">
+                    <span class="symbol"><img src="../images/logo.svg" alt="" /></span><span
+                        class="title">Portfolio</span>
+                </a> -->
+
+                <!-- Nav -->
+                <nav>
+                    <ul>
+                        <li><a href="#menu">Menu</a></li>
+                    </ul>
+                </nav>
+
+            </div>
+        </header>
+
+        <!-- Menu -->
+        <nav id="menu">
+            <h2>Menu</h2>
+            <ul>
+                <li><a href="../index.html">Home</a></li>
+                <!--
+                <li><a href="../generic.html">Ipsum veroeros</a></li>
+                <li><a href="../generic.html">Tempus etiam</a></li>
+                <li><a href="../generic.html">Consequat dolor</a></li>
+                <li><a href="../elements.html">Elements</a></li>
+                -->
+            </ul>
+        </nav>
+
+        <!-- Main -->
+        <div id="main">
+            <div class="inner">
+                <h1>扇義陰陽道中</h1>
+                <h2>扇子で空中にお絵描きするインタラクティブコンテンツ</h2>
+                <h2>東京ゲームショウ2022 出展</h2>
+                <span class="image main"><img src="../images/sub_pages/fan/header.png" alt="" /></span>
+
+                <blockquote>ゲーム, インタラクティブコンテンツ, 2D LiDAR, 透明スクリーン, 東京ゲームショウ</blockquote>
+
+                <div class="raw">
+                    <h3>使用技術</h3>
+                    <ul>
+                        <li>C++ (OpenCV, 2D LiDAR, Bluetooth通信, M5StickC(圧力センサ, 加速度センサ))</li>
+                        <li>Unity (C#)</li>
+                    </ul>
+                </div>
+
+                
+                <h3>概要</h3>
+                <p>
+                    扇子をコントローラとして使用するアクションゲームです。プレイヤーは扇子を使って空中に円・三角・四角の図形を描き、その図形を扇いで飛ばすことで敵を攻撃します。
+
+                    ゲーム画面とプレイヤーの間には透明スクリーンを設置しており、扇子の軌跡がリアルタイムに投影されます。これにより、空中に直接絵を描いているような体験を実現しました。敵ごとに対応する図形が異なるため、素早く正確に図形を描き分けることが求められます。
+
+                    「変わったものをコントローラにする」をテーマに、東京ゲームショウ2022にて展示を行いました。
+                </p>
+
+                <span class="image main"><video src="../movies/sub_pages/fan/fan1.mp4" controls
+                        style="width: 100%; display: block; border-radius: 4px;"></video></span>
+
+                <hr />
+                <h3>2D LiDARによる扇子の軌跡取得と図形判別</h3>
+                <p><span class="image left"><video src="../movies/sub_pages/fan/3.mp4" controls
+                            style="width: 100%;"></video></span>
+                            プレイヤーが扇子で描いた軌跡は、2D LiDARを用いてリアルタイムに取得しています。取得した軌跡から図形の輪郭を生成し、OpenCVによる画像処理によって図形を判別しました。
+                            図形判別は、輪郭を近似して得られた頂点数や円形度を利用しています。頂点数が3であれば三角形、4であれば四角形、円形度が一定以上であれば円として判定します。これにより、プレイヤーが空中に描いた図形をリアルタイムに認識し、ゲーム内の攻撃アクションへ反映しています。
+                </p>
+                
+                <hr style="clear: both;" />
+                <h3>東京ゲームショウ2022 への出展</h3>
+                <p><span class="image right"><video src="../movies/sub_pages/fan/fan.mp4" controls
+                            style="width: 100%;"></video></span>
+                    作成したコンテンツは2022年9月15日~18日に東京ビッグサイトで開催された東京ゲームショウ2022にて展示を行いました。
+                    東京ゲームショウ2022では、子どもから大人まで幅広い年齢層の来場者が本コンテンツを体験し、楽しんでいただきました。
+                </p>
+                
+                <hr style="clear: both;" />
+                <h3>関連リンク</h3>
+                <ul class="alt">
+                    <li><a href="https://expo.nikkeibp.co.jp/tgs/2022/jp/">東京ゲームショウ2022</a></li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- Footer -->
+        <footer id="footer">
+            <div class="inner">
+                <section>
+                    <h2>Follow</h2>
+                    <ul class="icons">
+                        <li><a href="https://github.com/Nibosi0501/Nibosi0501"
+                                class="icon brands style2 fa-github"><span class="label">GitHub</span></a></li>
+                        <li><a href="mailto:nibosi0501@gmail.com" class="icon solid style2 fa-envelope"><span
+                                    class="label">Email</span></a></li>
+                    </ul>
+                </section>
+                <ul class="copyright">
+                    <li>&copy; Untitled. All rights reserved</li>
+                    <li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
+                </ul>
+            </div>
+        </footer>
+
+    </div>
+
+    <!-- Scripts -->
+    <script src="../assets/js/jquery.min.js"></script>
+    <script src="../assets/js/browser.min.js"></script>
+    <script src="../assets/js/breakpoints.min.js"></script>
+    <script src="../assets/js/util.js"></script>
+    <script src="../assets/js/main.js"></script>
+
+</body>
+
+</html>
