@@ -59,7 +59,7 @@
             <div class="inner">
                 <h1>LiViMotion</h1>
                 <h2>歩行位置と身体動作に基づく、個人ごとの床面映像とのインタラクション</h2>
-                <span class="image main"><img src="../images/sub_pages/LiViMotion/header.png" alt="" /></span>
+                <span class="image main"><img src="../images/sub_pages/LiViMotion/header.webp" alt="" /></span>
 
                 <blockquote>インタラクション, 床面映像, ジェスチャ認識, センサフュージョン, カルマンフィルタ, 2D LiDAR</blockquote>
 
@@ -92,13 +92,13 @@
 
                 <hr style="clear: both;" />
                 <h3>カメラのキャリブレーション</h3>
-                <p><span class="image right"><img src="../images/sub_pages/LiViMotion/calibration.png" alt="" /></span>
+                <p><span class="image right"><img src="../images/sub_pages/LiViMotion/calibration.webp" alt="" /></span>
                     床面に投影した格子状マーカーを利用し、カメラ座標系と床面座標系の対応関係を構築しました。各マーカーの既知座標と画像上の検出位置から射影変換行列を算出することで、カメラ映像中の人物位置を床面座標へ高精度に変換し、床面映像とのインタラクションに活用しています。
                 </p>
 
                 <hr style="clear: both;" />
                 <h3>センサフュージョン</h3>
-                <p><span class="image left"><img src="../images/sub_pages/LiViMotion/img1.jpg" alt="" /></span>
+                <p><span class="image left"><img src="../images/sub_pages/LiViMotion/img1.webp" alt="" /></span>
                     各ユーザの歩行位置と身体動作を結び付けるため、2D LiDARとカメラのデータ統合を行いました。2D LiDARから取得した歩行位置と、カメラ映像から推定した歩行位置を比較することで、同一人物の対応付けを行います。
                     カメラによる骨格検出には処理遅延が生じるため、カルマンフィルタを用いて数フレーム先の位置を予測し、遅延を補正しました。その後、ハンガリアンアルゴリズムを用いてLiDARとカメラの歩行位置を最適に対応付けることで、高精度な位置追跡と身体動作認識を実現しています。
                     これにより、複数人が同時に利用する環境でも、各ユーザの身体動作に応じた個別のインタラクションを可能にしています。
